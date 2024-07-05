@@ -13,15 +13,17 @@ const Navbar = () => {
           </button>
         </div>
         {/* left this comment on purpose */}
-        {pageLinks.map((link) => {
-          return (
-            <li key={link.id}>
-              <a href={link.href} className="nav-link">
-                {link.text}
-              </a>
-            </li>
-          );
-        })}
+        <ul className="nav-links" id="nav-links">
+          {pageLinks.map((link) => {
+            return (
+              <li key={link.id}>
+                <a href={link.href} className="nav-link">
+                  {link.text}{" "}
+                </a>
+              </li>
+            );
+          })}
+        </ul>
 
         <ul className="nav-icons">
           <li>
