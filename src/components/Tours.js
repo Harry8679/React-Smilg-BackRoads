@@ -1,13 +1,43 @@
 import React from "react";
 import Title from "./Title";
+import { tours } from "../data";
 
 const Tours = () => {
   return (
     <section className="section" id="tours">
-      <Title title='futured' subTitle='tours' />
+      <Title title="futured" subTitle="tours" />
 
       <div className="section-center featured-center">
-        <article className="tour-card">
+        {tours.map((tour) => {
+          const { id, image, alt, date, title, content, country, howLong, from } = tour;
+          return (
+            <article className="tour-card" key={id}>
+              <div className="tour-img-container">
+                <img src={image} className="tour-img" alt={alt} />
+                <p className="tour-date">{date}</p>
+              </div>
+              <div className="tour-info">
+                <div className="tour-title">
+                  <h4>{title}</h4>
+                </div>
+                <p>
+                  {content}
+                </p>
+                <div className="tour-footer">
+                  <p>
+                    <span>
+                      <i className="fas fa-map"></i>
+                    </span>{" "}
+                    {country}
+                  </p>
+                  <p>{howLong}</p>
+                  <p>{from}</p>
+                </div>
+              </div>
+            </article>
+          );
+        })}
+        {/* <article className="tour-card">
           <div className="tour-img-container">
             <img src="./images/tour-1.jpeg" className="tour-img" alt="" />
             <p className="tour-date">august 26th, 2020</p>
@@ -107,7 +137,7 @@ const Tours = () => {
               <p>from $3300</p>
             </div>
           </div>
-        </article>
+        </article> */}
       </div>
     </section>
   );
