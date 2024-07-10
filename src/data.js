@@ -10,3 +10,24 @@ export const socialLinks = [
   { id: 2, href: "https://facebook.com", icon: "fab fa-facebook" },
   { id: 3, href: "https://www.youtube.com", icon: "fab fa-squarespace" },
 ];
+
+export const services = [
+    {
+        id: 1,
+        icon: 'fas fa-wallet fa-fw',
+        title: 'Saving money',
+        text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, officia.'
+    },
+    {
+        id: 2,
+        icon: 'fas fa-tree fa-fw',
+        title: 'Endless hiking',
+        text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, officia.'
+    },
+    {
+        id: 3,
+        icon: 'fas fa-socks fa-fw',
+        title: 'Amazing comfort',
+        text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, officia.'
+    }
+]
