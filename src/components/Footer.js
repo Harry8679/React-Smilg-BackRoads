@@ -15,26 +15,6 @@ const Footer = () => {
             </li>
           );
         })}
-        {/* <li>
-          <a href="#home" className="footer-link">
-            home
-          </a>
-        </li>
-        <li>
-          <a href="#about" className="footer-link">
-            about
-          </a>
-        </li>
-        <li>
-          <a href="#services" className="footer-link">
-            services
-          </a>
-        </li>
-        <li>
-          <a href="#featured" className="footer-link">
-            featured
-          </a>
-        </li> */}
       </ul>
       <ul className="footer-icons">
         <li>
