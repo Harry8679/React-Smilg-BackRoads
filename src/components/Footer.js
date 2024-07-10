@@ -17,33 +17,20 @@ const Footer = () => {
         })}
       </ul>
       <ul className="footer-icons">
-        <li>
-          <a
-            href="https://www.twitter.com"
-            target="_blank"
-            className="footer-icon"
-          >
-            <i className="fab fa-facebook"></i>
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://www.twitter.com"
-            target="_blank"
-            className="footer-icon"
-          >
-            <i className="fab fa-twitter"></i>
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://www.twitter.com"
-            target="_blank"
-            className="footer-icon"
-          >
-            <i className="fab fa-squarespace"></i>
-          </a>
-        </li>
+        {socialLinks.map((link) => {
+          const { id, href, icon } = link;
+          return (
+            <li key={id}>
+              <a
+                href={href}
+                target="_blank"
+                className="footer-icon"
+              >
+                <i className={icon}></i>
+              </a>
+            </li>
+          );
+        })}
       </ul>
       <p className="copyright">
         copyright &copy; Backroads travel tours company
