@@ -1,10 +1,21 @@
 import React from "react";
+import { pageLinks, socialLinks } from "../data";
 
 const Footer = () => {
   return (
     <footer className="section footer">
       <ul className="footer-links">
-        <li>
+        {pageLinks.map((page) => {
+          const { id, href, text } = page;
+          return (
+            <li key={id}>
+              <a href={href} className="footer-link">
+                {text}
+              </a>
+            </li>
+          );
+        })}
+        {/* <li>
           <a href="#home" className="footer-link">
             home
           </a>
@@ -23,7 +34,7 @@ const Footer = () => {
           <a href="#featured" className="footer-link">
             featured
           </a>
-        </li>
+        </li> */}
       </ul>
       <ul className="footer-icons">
         <li>
